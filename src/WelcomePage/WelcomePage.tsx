@@ -9,16 +9,17 @@ export function WelcomePage() {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        httpService.fetch('/api/public')
+        httpService.fetch({url :'/public'})
         .then((response: { json: () => any; }) => response.json())
-        .then((data: { content: SetStateAction<string>; }) => setContent(data.content));
+        .then(data => setContent(data.message));
     }, []);
 
     return (
     <div>
         <p>Login first to see private content</p>
-        <button onClick={() => navigate('/login')}>Login</button>
-        <button onClick={() => navigate('/private')}>Private content</button>
+        <Button onClick={() => navigate('/login')}>Login</Button>
+        <Button onClick={() => navigate('/private')}>Private content</Button>
+        <div>By the way, the server says: {content}</div>
     </div>
 );
 }

@@ -6,3 +6,7 @@ export interface THttpArgs {
         headers?: any
     }
 }
+
+export interface TAppStore {
+    authToken: string | null
+}

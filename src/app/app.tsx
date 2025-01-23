@@ -15,7 +15,7 @@ export function App() {
         <Route path='/' element={<WelcomePage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/private' element={<ProtectPage />} />
-        <Route path='/oauth2/idpresponse' element={<RedirectPage />} />
+        <Route path='/auth/callback' element={<RedirectPage />} />
       </Routes>
     </div>
   );
