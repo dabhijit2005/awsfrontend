@@ -5,6 +5,7 @@ import LoginPage from 'src/LoginPage/LoginPage';
 import ProtectPage from 'src/ProtectPage/ProtectPage';
 import RedirectPage from 'src/RedirectPage/RedirectPage';
 import WelcomePage from 'src/WelcomePage/WelcomePage';
+import './app.scss';
 
 export function App() {
   return (
